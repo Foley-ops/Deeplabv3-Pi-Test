@@ -1,8 +1,6 @@
-# deeplabv3_resnet_model.py
-
 import torch
 from torchvision import transforms
-from torchvision.models.segmentation import deeplabv3_resnet101, DeepLabV3_ResNet101_Weights
+from torchvision.models.segmentation import deeplabv3_resnet50, DeepLabV3_ResNet50_Weights
 from PIL import Image
 import matplotlib.pyplot as plt
 import time
@@ -10,6 +8,7 @@ import datetime
 import psutil
 import pynvml
 import os
+import gc
 import warnings
 import pandas as pd
 import numpy as np
@@ -22,9 +21,10 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 # Check device
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f"Device used: {device.upper()}")
 
 # Load model
-model = deeplabv3_resnet101(weights=DeepLabV3_ResNet101_Weights.DEFAULT).to(device)
+model = deeplabv3_resnet101(weights=DeepLabV3_ResNet50_Weights.DEFAULT).to(device)
 model.eval()
 
 # Download example image
@@ -136,3 +136,5 @@ plt.imshow(r)
 plt.title("DeepLabV3-ResNet101 Segmentation")
 plt.axis("off")
 plt.show()
+
+gc.collect() # free up memory
