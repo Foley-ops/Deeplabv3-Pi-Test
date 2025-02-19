@@ -2,7 +2,7 @@ import subprocess
 import time
 
 RUN_COMMAND = "python3"
-RUN_FILE = "deeplabv3_VOS.py"
+RUN_FILE = "deeplabv3_single.py"
 
 print(f"Starting Repeater on {RUN_FILE}...")
 for i in range(10):
