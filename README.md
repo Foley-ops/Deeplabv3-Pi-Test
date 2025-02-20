@@ -54,7 +54,7 @@ sudo swapon /swapfile
 
 To make the swap file permanent, add the following line to `/etc/fstab`:
 ```plaintext
-/swapfile none swap sw 0 0
+sudo echo '/swapfile none swap sw 0 0' >> /etc/fstab
 ```
 
 Check memory status:
