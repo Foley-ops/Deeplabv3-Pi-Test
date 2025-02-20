@@ -66,9 +66,9 @@ free -h
 
 ## **Running the Script**
 
-To run the `deeplabv3_resnet_model.py` script:
+To run the `deeplabv3_single.py` script:
 ```bash
-python3 deeplabv3_resnet_model.py
+python3 deeplabv3_single.py
 ```
 
 For running the script multiple times, run repeater.py, it's defaulted at 10, change the range.
