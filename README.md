@@ -131,27 +131,10 @@ git push origin feature-branch
 
 ---
 
-## **License**
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
-
----
-
 ## **Acknowledgments**
 
 - [PyTorch](https://pytorch.org/)
 - [Torchvision](https://pytorch.org/vision/stable/index.html)
 - Raspberry Pi community for support and resources.
 
----
-
-### **Commit Message:**
-```bash
-feat: Improve memory management and add swap file instructions
-
-- Switched to deeplabv3_resnet50 to reduce memory usage
-- Added garbage collection and memory clearing between runs
-- Updated README with detailed instructions on configuring swap memory
-- Added troubleshooting steps for Out of Memory (OOM) errors
-```
 
